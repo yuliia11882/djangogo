@@ -1,0 +1,19 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+<h2> Flower Inf </h2>
+<ul>
+        <li>ID: {{ records.id }}</li>
+        <li> Name: {{ records.name }}</li>
+        <li> Type: {{ records.type }}</li> 
+        <li>Location: {{ records.location }}</li>
+
+    {% for item in records.flowers.all %}
+     <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+</ul>
+
+{% endblock %}
